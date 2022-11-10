@@ -1,13 +1,16 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import ItemListContainer from './components/Products/ItemListContainer';
+import Products from './components/Products/ItemListContainer';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Hola
-        </h1>
-      </header>
+      <Header />
+      <ItemListContainer greeting="Productos" />
+      <Footer />
     </div>
   );
 }
