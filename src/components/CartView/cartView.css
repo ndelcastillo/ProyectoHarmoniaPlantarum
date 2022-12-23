@@ -1,0 +1,104 @@
+.mainContainerCartView{
+    height: 70vh;
+    margin: 150px 0px 0px 0px;;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cartViewBody{
+    margin: 100px 0px 0px 0px;
+}
+
+.cartViewTitleVacio {
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    font-size: 22px;
+    color: black;
+    letter-spacing: 0px;
+    font-family: 'neueHaasBold';
+}
+
+.cartViewLinkVacio {
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    font-size: 22px;
+    color: black;
+    letter-spacing: 0px;
+    font-family: 'neueHaasBold';
+}
+
+.cartViewTitle{
+    font-family: 'neueHaasMedium';
+}
+
+.cartViewTable {
+    border-spacing: 0;
+    width: 1000px;
+    margin: 0px 0px 0px 150px;
+}
+
+.cartViewTableHead {
+    background-color: rgb(150, 150, 150);
+    margin: 0px 0px 0px 0px;
+}
+
+.cartViewTableRow {
+    line-height: 50px;
+    margin: 0px 0px 0px 0px;
+}
+
+.cartViewTableRow th {
+    color: white;
+    font-family: 'neueHaasRoman';
+    font-size: 15px;
+}
+
+
+.cartViewTableBody {
+    margin: 0px 0px 0px 0px;
+}
+
+.cartViewTableBodyInfo {
+    line-height: 65px;
+    margin: 0px 0px 0px 0px;
+}
+
+.cartViewTableBodyInfoImg {
+    margin: 0px 0px 0px 0px;
+}
+
+.cartViewTableBodyInfoImg img {
+    height: 50px;
+    margin: 0px 0px 0px 0px;
+    
+}
+
+.cartViewTableBodyInfoName {
+    margin: 0px 0px 0px 0px;
+    font-family: 'neueHaasMedium';
+}
+
+.cartViewTableBodyInfoPrice {
+    margin: 0px 0px 0px 0px;
+    font-family: 'neueHaasThin';
+}
+
+.cartViewTableBodyInfoQty {
+    margin: 0px 0px 0px 0px;
+    font-family: 'neueHaasThin';
+}
+
+.cartViewTableBodyInfoSubtotal {
+    margin: 0px 0px 0px 0px;
+    font-family: 'neueHaasThin';
+}
+
+.cartViewPrecioCompra{
+    position: relative;
+    right: 150px;
+}

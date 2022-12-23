@@ -1,49 +1,46 @@
-import React from 'react'
-import CardItem from './CardItem';
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
+import ItemList from './ItemList';
+import CarouselHeader from '../Carousel/CarouselHeader';
 import './itemListContainer.css';
+import { DotWave } from '@uiball/loaders'
+import {getItems, getItemsByCategory} from '../../services/firestore';
 
-import card1 from "../../assets/images/products/cards/terrarios007.jpg"
-import card2 from "../../assets/images/products/cards/terrarios002.jpg"
-import card3 from "../../assets/images/products/cards/terrarios006.jpg"
-import card4 from "../../assets/images/products/cards/terrarios004.jpg"
+function ItemListContainer() {
+    const [productos, setProductos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
+    const { cat } = useParams()
 
-function ItemListContainer(props) {
+    useEffect(() => {
+        setIsLoading(true)
+        if (cat === undefined) {
+            getItems()
+                .then((respuestaProductos) => setProductos(respuestaProductos))
+                .finally(() => setIsLoading(false))
+        } else {
+            getItemsByCategory(cat)
+                .then((respuestaProductosFiltrados) => setProductos(respuestaProductosFiltrados))
+                .finally(() => setIsLoading(false))
+        }
+    }, [cat]);
+
     return (
-        <div className='container d-flex justify-content-center align-items-center h-100 p-5'>
-            <h1>{props.greeting}</h1>
-            <div className='row'>
-                <div className='col-md-3'>
-                    <CardItem
-                        title="Terrario1"
-                        img={card1}
-                        price={4000}
-                    />
-                </div>
-                <div className='col-md-3'>
-                    <CardItem
-                        title="Terrario2"
-                        img={card2}
-                        price={5000}
-                    />
-                </div>
-                <div className='col-md-3'>
-                    <CardItem
-                        title="Terrario3"
-                        img={card3}
-                        price={6000}
-                    />
-                </div>
-                <div className='col-md-3'>
-                    <CardItem
-                        title="Terrario4"
-                        img={card4}
-                        price={6000}
-                    />
-                </div>
+        <div className='mainItemListContainer'>
+            <CarouselHeader />
+            <div className='container mt-5'>
+                {isLoading ?
+                    <DotWave
+                        size={47}
+                        speed={1}
+                        color="black"
+                    /> :
+                    <div className='container d-block justify-content-center align-items-center h-100 p-5'>
+                        <ItemList productos={productos} />
+                    </div>
+                }
             </div>
         </div>
     )
 }
-
 export default ItemListContainer

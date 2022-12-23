@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping }  from "@fortawesome/free-solid-svg-icons";
-import * as iconList from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import './cartWidget.css'
+import { CarritoContext } from '../../context/carritoContext';
 
 function CartWidget() {
 
-    console.log(iconList)
+  const { getProductQty } = useContext(CarritoContext)
 
   return (
     <div>
-     <FontAwesomeIcon icon={ faCartShopping } /> 
+      <FontAwesomeIcon icon={faCartShopping} /> {getProductQty() > 0 && getProductQty()}
     </div>
   )
 }

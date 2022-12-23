@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './button.css'
 
 function Button({ children}) {
+    const [colorToggle, setColorToggle] = useState(true)
+
+    function handleClick(){
+        setColorToggle(!colorToggle)
+    }
 
   return (
-    <button className='btnBtn mb-4'>
+    <button 
+        style={{backgroundColor: colorToggle? "lightgrey" : "grey"}} 
+        onClick={handleClick} 
+        className='btnBtn'>
         {children}
     </button>
   )

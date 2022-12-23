@@ -1,0 +1,99 @@
+.conatiner{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.cardItemDetail {
+    transition: all 0.20s ease-in;
+    border-radius: 0% 0% 0% 0%;
+    box-shadow: 0px 0px 3px 0px rgb(198, 198, 198);
+    margin-top:100px;
+}
+
+.cardItemDetail:hover{
+    box-shadow: 0px 10px 15px 2px rgb(298, 298, 298);
+    transform: translateY(-2px);
+}
+
+.cardItemDetailImg{
+
+}
+
+.cardItemDetailImg1{
+    object-fit: cover;
+    border-radius: 0% 0% 0% 0%;
+}
+
+.cardItemDetailBody {
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    display: block;
+}
+
+.cardItemDetailName {
+    color: rgb(0, 0, 0);
+    margin: 0px 0px 0px 0px;
+    font-size: 22px;
+    font-family: 'neueHaasRoman';
+}
+
+.cardItemDetailPrice {
+    color: rgb(0, 0, 0);
+    margin: 0px 0px 0px 0px;
+    font-size: 15px;
+    font-family: 'neueHaasRoman';
+}
+
+.cardItemDetailStock {
+    color: rgb(0, 0, 0);
+    margin: 0px 0px 0px 0px;
+    font-size: 15px;
+    font-family: 'neueHaasRoman';
+}
+
+.cardItemDetailBtn{
+    margin: 0px 0px 20px 0px;
+}
+
+.cardItemDetailItemCount{
+    margin: 0px 0px 0px 0px;
+}
+
+.cardItemDetailTextSeeMore {
+    color: rgb(0, 0, 0);
+    padding: 15px 0px 0px 0px;
+    text-align: center;
+    font-size: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardItemDetailTextSeeMore:hover {
+    color: rgb(69, 69, 69);
+    padding: 15px 0px 0px 0px;
+    text-align: center;
+    font-size: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Ternario &&*/
+.priceTag{
+    color: rgb(240, 240, 240);
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    font-size: 18px;
+    font-family: 'neueHaasThin';
+}
+
+.offerTag{
+    color: rgb(240, 240, 240);
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    font-size: 18px;
+    font-family: 'neueHaasThin';
+}
+
+.urlDetalle{
+    list-style: none;
+    text-decoration: none;
+}
